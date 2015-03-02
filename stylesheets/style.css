@@ -2,6 +2,10 @@ body {
     font-family: 'Molengo', sans-serif;
 }
 
+div {
+    display: block;
+}
+
 body .container {
     max-width: 855px;
     margin: auto;
