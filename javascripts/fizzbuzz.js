@@ -4,7 +4,7 @@
 var main = function() {
     "use strict";
 
-    var i, str_array[];
+    var i, str_array = [];
 
 	
 	function fizzbuzz_1(){
