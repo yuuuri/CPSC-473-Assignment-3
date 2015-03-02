@@ -1,0 +1,9 @@
+body {
+    font-family: 'Molengo', sans-serif;
+}
+
+body .container {
+    max-width: 855px;
+    margin: auto;
+    padding: 30px;
+}
