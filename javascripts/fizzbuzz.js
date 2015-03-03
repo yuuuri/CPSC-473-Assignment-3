@@ -4,37 +4,70 @@
 var main = function() {
     "use strict";
 
-    var i, str_array = [];
+    var i;
 
-	
-	function fizzbuzz_1(){
+	  //writes number 1-100 except when divisible by 3, 5, and 3 & 5
+    function fizzbuzz_1(){
+
+        $("body .fizzbuzz_1").append("<p>");
+
         for (i = 1; i <= 100; i++) {
-			
               // write FizzBuzz if divisible by 3 and 5  
               if ((i%3 === 0) && (i%5 === 0)) {
-                    str_array.push("FizzBuzz");
+                    $("body .fizzbuzz_1").append("FizzBuzz ");
               // write Fizz if divisible by 3
               } else if (i%3 === 0) {
-                    str_array.push("Fizz");
+                    $("body .fizzbuzz_1").append("Fizz ");
               // write Buzz if divisble by 5
               } else if (i%5 === 0) {
-                    str_array.push("Buzz");
+                    $("body .fizzbuzz_1").append("Buzz ");
               // otherwise write i
               } else {
-                    str_array.push(i);
+                    $("body .fizzbuzz_1").append(" " + i + " ");
               }
 
         } // end of for loop
 
-    //display output on webpage
-    str_array.forEach(function(element){
-        $("body .fizzbuzz_1").append($("<p>").text(element));
-    });
+        $("body .fizzbuzz_1").append("</p><br>");
 
-  }// end of fizzbuzz_1
+    }// end of fizzbuzz_1
+
+    
+    //same function above except use parameter start and end
+    function fizzbuzz_2(start, end) {
+
+        $("body .fizzbuzz_2").append("<p>");
+
+        for (i = start; i <= end; i++) {
+                      // write FizzBuzz if divisible by 3 and 5  
+              if ((i%3 === 0) && (i%5 === 0)) {
+                    $("body .fizzbuzz_2").append("FizzBuzz ");
+              // write Fizz if divisible by 3
+              } else if (i%3 === 0) {
+                    $("body .fizzbuzz_2").append("Fizz ");
+              // write Buzz if divisble by 5
+              } else if (i%5 === 0) {
+                    $("body .fizzbuzz_2").append("Buzz ");
+              // otherwise write i
+              } else {
+                    $("body .fizzbuzz_2").append(" " + i + " ");
+              }
+
+        } // end of for loop
+
+        $("body .fizzbuzz_2").append("</p><br>");
+
+    }// end of fizzbuzz_2
+    
+                    
+
+
+
    
-    //calling function to display number, Fizz, Buzz, or FizzBuzz
-   fizzbuzz_1();
+    // calling function to display number, Fizz, Buzz, or FizzBuzz
+    fizzbuzz_1();
+    // calling same function above except using parameter
+    fizzbuzz_2(200, 300);
 
 
 };

@@ -1,13 +1,13 @@
 body {
+
     font-family: 'Molengo', sans-serif;
 }
 
-div {
-    display: block;
-}
 
 body .container {
-    max-width: 855px;
-    margin: auto;
-    padding: 30px;
+  max-width: 855px;
+  margin: auto;
+  padding: 20px;
 }
+
+
