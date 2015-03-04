@@ -122,15 +122,45 @@ var main = function() {
                     $("body .fizzbuzz_4").append(" " + i + " ");
               }
 
-        } // end of for loop    
-            $("body .fizzbuzz_4").append("</p><br>");
+        } // end of for loop
+
+        $("body .fizzbuzz_4").append("</p><br>");
 
     }// end of fizzbuzz_4  
-    
+  
+    function fizzbuzz_5(arr,obj) {
 
+        $("body .fizzbuzz_5").append("<p>FizzBuzz_5</p>"); 
+        $("body .fizzbuzz_5").append("<p>");
+ 
+        if (arr.length > 0) {
 
+              for (i = 0; i < arr.length; i++) {
+                  // write FizzBuzz if divisible by 3 and 5  
+                  if ( ( (arr[i]) %3 === 0) && ( (arr[i]) %5 === 0 ) ) {
+                        $("body .fizzbuzz_5").append(obj.divisibleByThree + obj.divisibleByFive + " ");
+                  // write Fizz if divisible by 3
+                  } else if ( (arr[i]) %3 === 0 ) {
+                        $("body .fizzbuzz_5").append(obj.divisibleByThree + " ");
+                  // write Buzz if divisble by 5
+                  } else if ( (arr[i]) %5 === 0 ) {
+                        $("body .fizzbuzz_5").append(obj.divisibleByFive + " ");
+                  // otherwise write i
+                  } else {
+                        $("body .fizzbuzz_5").append(" " + arr[i] + " ");
+                  }
 
-   
+            } // end of for loop
+
+        } else {
+                alert("No element in array");
+                console.log("Error: No elements in array");
+        }
+
+        $("body .fizzbuzz_5").append("</p><br>");
+
+    }// end of fizzbuzz_5 */
+ 
     // calling function to display number, Fizz, Buzz, or FizzBuzz
     fizzbuzz_1();
     // calling same function above except using parameter
@@ -139,6 +169,9 @@ var main = function() {
     fizzbuzz_3([101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]);
     // calling same function with parameter of object
     fizzbuzz_4({divisibleByThree: "foo", divisibleByFive: "bar"});
+    // calling same function with object and array
+    fizzbuzz_5([101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115], {divisibleByThree: "foo", divisibleByFive: "bar"});
+ 
 };
 $(document).ready(main);
 
